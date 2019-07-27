@@ -1,11 +1,15 @@
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/19553554/61995478-bd21e980-b0bb-11e9-8206-5a5958e27b25.png" alt="Linux logo" width=200 />
+    <img src="https://user-images.githubusercontent.com/19553554/61995478-bd21e980-b0bb-11e9-8206-5a5958e27b25.png" alt="Linux logo" width=180 />
 </p>
 
 <h1 align="center">📝 how</h1>
 <p align="center">
     <em>Impressive Linux commands cheat sheet.</em>
 </p>
+
+### 💡 IDEA
+
+Linux 已经是每位开发者必备的技能，如何高效地学习和掌握 Linux 命令就成为一件很重要的事了。[jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command) 项目收集和整理了 500+ 的 Linux 命令使用文档，不过缺少了一个命令行版本，`how` 决定来填补这个空缺。
 
 ### 🔰 安装
 
@@ -22,7 +26,7 @@ $ pip install -r requirements.txt
 $ python setup.py install
 ```
 
-### 📝 使用
+### 📏 使用
 
 ```bash
 $ how
@@ -39,7 +43,17 @@ optional arguments:
   -v, --version  displays the current version of `how`
 ```
 
-**示例**
+建议第一次使用 `how` 时先初始化所有的命令文档，`how -i`，该命令会将 https://github.com/jaywcjlove/linux-command 的 .md 文档下载到 `~/.command` 本地路径下。不过这个操作不是必须的，因为如果 `how some-command` 在本地路径中查询不到的话，会尝试先向远程地址下载。
+
+### 🔖 示例
+
+初始化所有文档，同时也是更新所有文档的命令
+```shell
+$ how -i
+Initializing commands: 96/562 
+```
+
+查询如何使用 `man` 命令
 ```shell
 $ how man
 # man
@@ -94,7 +108,8 @@ man 3 sleep
 
 ### 📅 Changelog
 
-#### V0.1.0 - 2019-07-27
+#### V0.1.0 - 2019-07-28
+
 * Alpha: 第一个正式版发布
 
 ### 📃 LICENSE
