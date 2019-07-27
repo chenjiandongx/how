@@ -23,7 +23,7 @@ TAG_TEXT = "text"
 TAG_BLOCK_QUOTE = "block_quote"
 
 EXT = ".md"
-MAX_WIDTH = 36
+MAX_WIDTH = 37
 MAX_CONCURRENCY = 12
 
 
@@ -52,10 +52,7 @@ def docs_need_space(docs):
 
 
 def wrap_text(text):
-    para_edge = re.compile(r"(\n\s*\n)", re.MULTILINE)
-    paragraphs = para_edge.split(text)
-    wrapped_lines = [textwrap.fill(para, width=MAX_WIDTH) for para in paragraphs]
-    return "\n".join(wrapped_lines)
+    return textwrap.fill(text=text, width=MAX_WIDTH) + "\n"
 
 
 def highlight(text: str, keyword: str):
@@ -106,14 +103,13 @@ def how_to_use(command):
                     tag.literal = tag.literal + "\n" * 2 + "- "
                 if tags[i + 1].t == TAG_BLOCK_QUOTE:
                     tag.literal = tag.literal + "\n" * 2 + "> "
-                tag.literal = wrap_text(tag.literal)
             if tag.t == TAG_CODE_BLOCK:
                 tag.literal = tag.literal + "\n"
 
         if tag.literal:
             out += tag.literal
-    doc = docs_need_space(out).strip()
-    print(highlight(doc, command) + "\n")
+    doc = [wrap_text(d) for d in docs_need_space(out).strip().split("\n")]
+    print(highlight("".join(doc), command))
 
 
 @retry(stop=stop_after_attempt(3))
@@ -171,7 +167,7 @@ def command_line_runner():
     parser = get_parser()
     args = vars(parser.parse_args())
 
-    command = " ".join(args["command"])
+    command = "".join(args["command"]).lower()
 
     if args["version"]:
         print(huepy.info("how " + __version__))

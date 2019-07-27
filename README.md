@@ -9,7 +9,7 @@
 
 ### 💡 IDEA
 
-Linux 已经是每位开发者必备的技能，如何高效地学习和掌握 Linux 命令就成为一件很重要的事了。[jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command) 项目收集和整理了 500+ 的 Linux 命令使用文档，不过缺少了一个命令行版本，`how` 决定来填补这个空缺。
+Linux 是每位开发者必备的技能，如何高效地掌握 Linux 命令就成为一件很重要的事了。[jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command) 项目收集和整理了 500+ 的 Linux 命令使用文档，不过缺少了一个命令行版本，`how` 决定来填补这个空缺。
 
 ### 🔰 安装
 
@@ -43,7 +43,7 @@ optional arguments:
   -v, --version  displays the current version of `how`
 ```
 
-建议第一次使用 `how` 时先初始化所有的命令文档，`how -i`，该命令会将 https://github.com/jaywcjlove/linux-command 的 .md 文档下载到 `~/.command` 本地路径下。不过这个操作不是必须的，因为如果 `how some-command` 在本地路径中查询不到的话，会尝试先向远程地址下载。
+> Note: 建议第一次使用 `how` 时先初始化所有的命令文档，`how -i`，该命令会将 https://github.com/jaywcjlove/linux-command 的 .md 文档下载到 `~/.command` 本地路径下。不过这个操作不是必须的，因为如果 `how some-command` 在本地路径中查询不到的话，会尝试先向远程地址下载。
 
 ### 🔖 示例
 
