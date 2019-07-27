@@ -23,7 +23,7 @@ TAG_TEXT = "text"
 TAG_BLOCK_QUOTE = "block_quote"
 
 EXT = ".md"
-MAX_WIDTH = 37
+MAX_WIDTH = 40
 MAX_CONCURRENCY = 12
 
 
