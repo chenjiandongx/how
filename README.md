@@ -7,6 +7,18 @@
     <em>Impressive Linux commands cheat sheet.</em>
 </p>
 
+<p align="center">
+    <a href="https://badge.fury.io/py/how">
+        <img src="https://badge.fury.io/py/how.svg" alt="PyPI - Python Version">
+    </a>
+    <a href="https://pypi.org/project/how/">
+        <img src="https://img.shields.io/pypi/pyversions/how.svg?colorB=brightgreen" alt="PyPI - Python Version">
+    </a>
+    <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="MIT License">
+    </a>
+</p>
+
 ### 💡 IDEA
 
 Linux 是每位开发者必备的技能，如何高效地掌握 Linux 命令就成为一件很重要的事了。[jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command) 项目收集和整理了 500+ 的 Linux 命令使用文档，不过缺少了一个命令行版本，`how` 决定来填补这个空缺。
@@ -85,8 +97,8 @@ man(选项)(参数)
 
 1：用户在 shell 环境可操作的命令或执行文件；
 2：系统内核可调用的函数与工具等
-3：一些常用的函数(function)
-与函数库(library)，大部分为 C 的函数库(libc)
+3：一些常用的函数(function) 与函数库(library)，大部分为 C
+的函数库(libc)
 4：设备文件说明，通常在/dev 下的文件
 5：配置文件或某些文件格式
 6：游戏(games)
@@ -97,8 +109,8 @@ man(选项)(参数)
 
 ###  实例
 
-我们输入 man ls，它会在最左上角显示“LS（1）”，在这里，“LS”
-表示手册名称，而“（1）”表示该手册位于第一节章，同样，我们输 man
+我们输入 man ls，它会在最左上角显示“LS（1）”，在这里，“LS”表示手
+册名称，而“（1）”表示该手册位于第一节章，同样，我们输 man
 ifconfig
 它会在最左上角显示“IFCONFIG（8）”。也可以这样输入命令：“man
 [章节号] 手册名称”。
