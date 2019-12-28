@@ -23,6 +23,8 @@
 
 Linux 是每位开发者必备的技能，如何高效地掌握 Linux 命令就成为一件很重要的事了。[jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command) 项目收集和整理了 500+ 的 Linux 命令使用文档，不过缺少了一个命令行版本，`how` 决定来填补这个空缺。
 
+* Golang 版本: [chenjiandongx/pls](https://github.com/chenjiandongx/pls)
+
 ### 🔰 安装
 
 **pip 安装**
