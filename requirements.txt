@@ -1,0 +1,4 @@
+commonmark
+huepy
+requests
+tenacity
