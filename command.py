@@ -1,3 +1,5 @@
+import requests
+
 COMMAND = [
     "ab",
     "accept",
@@ -99,6 +101,7 @@ COMMAND = [
     "dircolors",
     "dirname",
     "dirs",
+    "disown",
     "dmesg",
     "dmidecode",
     "dnf",
@@ -163,9 +166,9 @@ COMMAND = [
     "gcc",
     "gcov",
     "gdb",
+    "get_module",
     "getenforce",
     "getsebool",
-    "get_module",
     "git",
     "gpasswd",
     "gpm",
@@ -268,8 +271,8 @@ COMMAND = [
     "lpstat",
     "ls",
     "lsattr",
-    "lsblk",
     "lsb_release",
+    "lsblk",
     "lscpu",
     "lsmod",
     "lsof",
@@ -289,6 +292,7 @@ COMMAND = [
     "mailstat",
     "make",
     "man",
+    "mapfile",
     "md5sum",
     "mesg",
     "mii-tool",
@@ -391,6 +395,7 @@ COMMAND = [
     "resize",
     "restore",
     "restorecon",
+    "return",
     "rev",
     "rexec",
     "rlogin",
@@ -426,8 +431,10 @@ COMMAND = [
     "sftp-server",
     "sftp",
     "sh",
+    "shift",
     "shopt",
     "showmount",
+    "shuf",
     "shutdown",
     "skill",
     "slabtop",
@@ -459,6 +466,7 @@ COMMAND = [
     "sudo",
     "sum",
     "supervisord",
+    "suspend",
     "swapoff",
     "swapon",
     "sync",
@@ -480,6 +488,7 @@ COMMAND = [
     "test",
     "tftp",
     "time",
+    "times",
     "tload",
     "tmux",
     "top",
@@ -562,3 +571,10 @@ COMMAND = [
     "zipsplit",
     "znew",
 ]
+
+
+def _fetch_commands():
+    url = "https://unpkg.com/linux-command/dist/data.json"
+    commands = requests.get(url).json()
+    for cmd in commands:
+        print(cmd)

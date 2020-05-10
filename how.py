@@ -24,13 +24,10 @@ TAG_BLOCK_QUOTE = "block_quote"
 
 EXT = ".md"
 MAX_WIDTH = 40
-MAX_CONCURRENCY = 12
-
+MAX_CONCURRENCY = 8
 
 COMMAND_DIR = os.path.join(os.path.expanduser("~"), ".command")
-FILE_URL = (
-    "https://raw.githubusercontent.com/jaywcjlove/linux-command/master/command/{}.md"
-)
+FILE_URL = "https://unpkg.com/linux-command/command/{}.md"
 
 
 class Tag:
@@ -147,7 +144,9 @@ def init_command():
 
 
 def get_parser():
-    parser = argparse.ArgumentParser(description="Impressive Linux commands cheat sheet.")
+    parser = argparse.ArgumentParser(
+        description="Impressive Linux commands cheat sheet."
+    )
     parser.add_argument(
         "command", metavar="COMMAND", type=str, nargs="*", help="the puzzling command"
     )
